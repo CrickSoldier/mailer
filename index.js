@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 // async..await is not allowed in global scope, must use a wrapper
 async function main(){
 
-  // Generate test SMTP service account from ethereal.email
+  // Generate test SMTP service account 
   // Only needed if you don't have a real mail account for testing
   let account = await nodemailer.createTestAccount();
 
@@ -15,7 +15,7 @@ async function main(){
     secure: false, // true for 465, false for other ports
     auth: {
       user: '',
-      pass: '' // generated ethereal password
+      pass: '' //   password
     }
   });
 
