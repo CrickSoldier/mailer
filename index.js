@@ -14,24 +14,25 @@ async function main(){
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: 'bvoc2754helpline@gmail.com',
-      pass: '10hph2638' // generated ethereal password
+      user: '',
+      pass: '' // generated ethereal password
     }
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-    from: 'shivam.bhardwaj18400@gmail.com', // sender address
-    to: "fivuhoha@directmail24.net", // list of receivers
+    from: '', // sender address
+    to: "", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world?", // plain text body
     html: "<p><b>Hello</b> to myself!</p>",// html body
     attachments: [
-      {   // utf-8 string as an attachment
-          filename: 'encrypted.txt',
-          content: 'VEhJUyBJUyBBIFNFQ1JFVCEhISEgQklUQ0g=',
-          encoding: 'base64'
-      }]
+      {   
+          path: 'Sonamlakpasherpa.JPG' // stream this file
+      },
+      {  
+        path: 'Z.JPG' // stream this file
+    }]
   };
 
   // send mail with defined transport object
@@ -54,6 +55,6 @@ function loop(){
   }
   }
 
-setTimeout(loop, 50000);
+setTimeout(loop, 6000);
 
 // setInterval(main, 500);
